@@ -14,6 +14,17 @@ if (typeof init === "undefined") {
 
     const changeHourValues = function (iframe) {
       for (let i = 0; i < 6; i++) {
+        if (
+          iframe.contentWindow.document
+            .querySelector(`#day_${i}`)
+            .textContent.includes("Samedi") ||
+          iframe.contentWindow.document
+            .querySelector(`#day_${i}`)
+            .textContent.includes("Dimanche")
+        ) {
+          continue;
+        }
+
         // Change Start hours
         const startHour_Hours_x = iframe.contentWindow.document.querySelector(
           `#startHour_Hours_${i}`,
