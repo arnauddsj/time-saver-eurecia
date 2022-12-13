@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Eurecia time saver",
+  "version": "1.0",
+  "description": "This extension fill time randomly in eurecia time sheets.",
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": ["https://plateforme.eurecia.com/*"],
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  }
+}
